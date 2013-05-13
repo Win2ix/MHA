@@ -1,0 +1,21 @@
+MHA (Master High Availability) for MySQL
+
+MySQL MHA tools are open source tools developed by Yoshinori Matsunobu which runs on top of MySQL and will help in the automatic master failover and the salve failover within few seconds. 
+
+MHA is a wonderful tool and helps in the following
+
+1) Automatic Master failover.
+2) Easy to configure/install.
+3) No need for extra servers thus saving cost.
+4) Supports both asynchronous and semi-synchronous. 
+5) No replication consistency problems. 
+6) Faster slave promotion.
+7) Scheduled online master switch.
+
+Project top page: http://code.google.com/p/mysql-master-ha/
+
+Documentation: http://code.google.com/p/mysql-master-ha/wiki/TableOfContents?tm=6
+
+Source tarball and rpm package (stable release): http://code.google.com/p/mysql-master-ha/downloads/list 
+
+We have added an init script for ubuntu/debian systems using nohup command in tandem with the pid file. 
