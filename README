@@ -18,4 +18,11 @@ Documentation: http://code.google.com/p/mysql-master-ha/wiki/TableOfContents?tm=
 
 Source tarball and rpm package (stable release): http://code.google.com/p/mysql-master-ha/downloads/list 
 
-We have added an init script for ubuntu/debian systems using nohup command in tandem with the pid file. 
+We at Win2ix have extended the usage of this by creating an init script for ubuntu/debian systems using nohup command in tandem with the pid file.
+
+Steps 
+1) Copy the mhamanager file from this git repo to /etc/init.d location of your server 
+2) Make the mhamanager file executable.
+3) Edit the file and point your mha config file and mha log file to the correct location for the line  
+	command_ls=`nohup masterha_manager --conf=/etc/app1.cnf < /dev/null >> /var/log/masterha/app1/app1.log 2>&1 &`
+4) You are good and test the init script by running "/etc/init.d/mhamanager status"
