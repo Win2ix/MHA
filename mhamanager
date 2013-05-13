@@ -1,0 +1,59 @@
+#! /bin/sh
+. /lib/lsb/init-functions
+
+name="mhamanager"
+#mhamanager_conf=/etc/app1.cnf  Configuration file for the MHA MANAGER
+#mhamanager_log=/var/log/masterha/app1/app1.log  Log file location for
+the MHA manager
+pid_file="/var/run/$name.pid"
+
+
+start () {
+command_ls=`nohup masterha_manager --conf=/etc/app1.cnf < /dev/null >>
+/var/log/masterha/app1/app1.log 2>&1 &`
+ps -ef | grep -i "masterha_manager" | grep -v grep | awk '{print $2}' >
+$pid_file
+
+log_daemon_msg "Starting $name"
+
+}
+
+stop () {
+log_daemon_msg "Stopping $name"
+start-stop-daemon --stop --quiet --oknodo --pidfile "$pid_file"
+
+}
+
+status () {
+log_daemon_msg "Status of $name"
+status_of_proc -p $pid_file "$name"
+}
+
+case $1 in
+start)
+if status; then exit 0; fi
+start
+status && exit 0 || exit $?
+;;
+stop)
+stop
+;;
+reload)
+stop
+start
+;;
+restart)
+stop
+start
+;;
+status)
+status && exit 0 || exit $?
+;;
+*)
+echo "Usage: $0 {start|stop|restart|reload|status}"
+exit 1
+;;
+esac
+
+exit 0
+
