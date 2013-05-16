@@ -1,33 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Mha by Win2ix</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Mha : MHA (Master High Availability) for MySQL" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Mha</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Mha</h1>
-        <p>MHA (Master High Availability) for MySQL</p>
 
-        <p class="view"><a href="https://github.com/Win2ix/MHA">View the Project on GitHub <small>Win2ix/MHA</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Win2ix/MHA">View on GitHub</a>
 
+          <h1 id="project_title">Mha</h1>
+          <h2 id="project_tagline">MHA (Master High Availability) for MySQL</h2>
 
-        <ul>
-          <li><a href="https://github.com/Win2ix/MHA/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/Win2ix/MHA/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Win2ix/MHA">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Win2ix/MHA/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Win2ix/MHA/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <p>MHA (Master High Availability) for MySQL</p>
 
 <p>MySQL MHA tools are open source tools developed by Yoshinori Matsunobu which runs on top of MySQL and will help in the automatic master failover and the salve failover within few seconds. </p>
@@ -56,13 +59,20 @@
 3) Edit the file and point your mha config file and mha log file to the correct location for the line<br>
     command_ls=<code>nohup masterha_manager --conf=/etc/app1.cnf &lt; /dev/null &gt;&gt; /var/log/masterha/app1/app1.log 2&gt;&amp;1 &amp;</code>
 4) You are good and test the init script by running "/etc/init.d/mhamanager status"</p>
+
+<p>Please contact Win2ix Systems if you would like to have any questions or for any modification at <a href="http://www.win2ix.ca">http://www.win2ix.ca</a></p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/Win2ix">Win2ix</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Mha maintained by <a href="https://github.com/Win2ix">Win2ix</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
