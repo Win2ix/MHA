@@ -1,5 +1,8 @@
 MHA (Master High Availability) for MySQL
 
+Sujith Jose <sjose@win2ix.ca> 
+Win2ix Systems Inc. http://www.win2ix.ca
+
 MySQL MHA tools are open source tools developed by Yoshinori Matsunobu which runs on top of MySQL and will help in the automatic master failover and the salve failover within few seconds. 
 
 MHA is a wonderful tool and helps in the following
